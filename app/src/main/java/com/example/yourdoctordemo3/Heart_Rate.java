@@ -11,22 +11,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firestore.v1.Write;
-import com.google.firestore.v1.WriteResult;
 
 import java.util.HashMap;
-import java.util.Map;
 
 
 public class Heart_Rate extends WearableActivity implements SensorEventListener {
@@ -79,8 +67,10 @@ public class Heart_Rate extends WearableActivity implements SensorEventListener 
     public void onSensorChanged(SensorEvent event) {
         String msg = "" + (int)event.values[0];
         hearttext.setText(msg);
-        String path = "first user";
+
         //FireStore
+
+        String path = "first user";
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         HashMap<String,Object> data = new HashMap<>();
         data.put("Heart Rate", msg);

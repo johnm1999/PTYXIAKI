@@ -9,52 +9,66 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault">
         <activity
-            android:name=".Notifications"
-            android:label="@string/title_activity_notifications"/>
+            android:name=".Sleep"
+            android:label="@string/title_activity_sleep"
+            android:exported="true"></activity>
 
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
         -->
+        <activity
+            android:name=".Notifications"
+            android:label="@string/title_activity_notifications" />
+
         <activity
             android:name=".History"
             android:label="@string/title_activity_history" />
-
         <activity
             android:name=".Heart_Rate"
             android:label="@string/title_activity_heart__rate" />
-        <activity
-            android:name=".Steps"
-            android:label="@string/title_activity_steps" />
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
         -->
         <activity
+            android:name=".Steps"
+            android:label="@string/title_activity_steps" />
+        <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
+        <!--
+               Set to true if your app is Standalone, that is, it does not require the handheld
+               app to run.
+        -->
         <uses-library
             android:name="com.google.android.wearable"
             android:required="true" />
     </application>
 
-    <uses-feature android:name="android.hardware.type.watch" />
-
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-
     <queries>
         <package android:name="com.google.android.wearable.healthservices" />
     </queries>
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.BODY_SENSORS"/>
     <uses-permission android:name="android.permission.BODY_SENSORS" />
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
 </manifest>

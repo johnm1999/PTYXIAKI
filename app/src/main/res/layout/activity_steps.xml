@@ -72,13 +72,14 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             >
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Distance:"
-                android:textSize="20dp"
                 android:textColor="#f0f5f5"
-                />
+                android:textSize="20dp" />
+
             <TextView
                 android:id="@+id/distance"
                 android:layout_width="wrap_content"
@@ -111,8 +112,31 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="#80bfff"/>
         </LinearLayout>
-        <ImageView
-            android:id="@+id/face"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Day:"
+                android:textSize="20dp"
+                android:textColor="#f0f5f5"
+                />
+            <TextView
+                android:id="@+id/status2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Start Walking"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#80bfff"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/WeeklySteps"
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

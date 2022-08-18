@@ -65,6 +65,22 @@
                 android:layout_height="match_parent"
                 android:gravity="center">
                 <ImageButton
+                    android:id="@+id/sleeping"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/sleeping"
+                    android:background="@drawable/start_but_shape"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+                <ImageButton
                     android:id="@+id/notification"
                     android:layout_width="60dp"
                     android:layout_height="match_parent"
